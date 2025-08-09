@@ -1,0 +1,249 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>HTML5 Demo: Lists, Tables, Media & Forms</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      margin: 1rem 2rem;
+      line-height: 1.6;
+      background: #f9f9f9;
+      color: #333;
+    }
+    header, section, footer {
+      margin-bottom: 2rem;
+      background: #fff;
+      padding: 1rem 1.5rem;
+      border-radius: 6px;
+      box-shadow: 0 2px 6px rgba(0,0,0,0.1);
+    }
+    h1, h2 {
+      color: #00509e;
+    }
+    table {
+      width: 100%;
+      border-collapse: collapse;
+      margin-top: 1rem;
+    }
+    th, td {
+      border: 1px solid #ccc;
+      padding: 0.5rem 1rem;
+      text-align: left;
+    }
+    th {
+      background-color: #e0f0ff;
+    }
+    fieldset {
+      border: 1px solid #00509e;
+      padding: 1rem;
+      margin-bottom: 1rem;
+      border-radius: 5px;
+      background-color: #f0f8ff;
+    }
+    legend {
+      font-weight: bold;
+      color: #00509e;
+      padding: 0 0.5rem;
+    }
+    label {
+      display: block;
+      margin-top: 0.5rem;
+      font-weight: 600;
+    }
+    input, select, textarea {
+      width: 100%;
+      padding: 0.4rem;
+      margin-top: 0.2rem;
+      border: 1px solid #ccc;
+      border-radius: 3px;
+      font-size: 1rem;
+      box-sizing: border-box;
+    }
+    button {
+      background-color: #00509e;
+      color: white;
+      padding: 0.7rem 1.5rem;
+      border: none;
+      border-radius: 4px;
+      font-size: 1rem;
+      cursor: pointer;
+    }
+    button:hover {
+      background-color: #003f6b;
+    }
+    /* Media elements responsive */
+    img, video, audio {
+      max-width: 100%;
+      height: auto;
+      display: block;
+      margin-top: 1rem;
+      border-radius: 5px;
+    }
+  </style>
+</head>
+<body>
+
+<header>
+  <h1>Welcome to HTML5 Demo Page</h1>
+  <p>This page demonstrates lists, tables, media embedding, and an accessible, validated form using HTML5.</p>
+</header>
+
+<section>
+  <h2>1. Lists</h2>
+  <h3>Unordered List (Features)</h3>
+  <ul>
+    <li>Clear content organization</li>
+    <li>Accessible and semantic markup</li>
+    <li>Easy to read and navigate</li>
+  </ul>
+
+  <h3>Ordered List (Steps to Build a Form)</h3>
+  <ol>
+    <li>Define the form structure using <code>&lt;form&gt;</code> and <code>&lt;fieldset&gt;</code>.</li>
+    <li>Use labels linked to inputs for accessibility.</li>
+    <li>Apply input types and validation attributes.</li>
+    <li>Embed media or instructional content as needed.</li>
+    <li>Test the form for usability and validation.</li>
+  </ol>
+</section>
+
+<section>
+  <h2>2. Table Example</h2>
+  <p>Below is a simple pricing table:</p>
+  <table>
+    <caption>Subscription Plans</caption>
+    <thead>
+      <tr>
+        <th>Plan</th>
+        <th>Monthly Price</th>
+        <th>Features</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td>Basic</td>
+        <td>$5</td>
+        <td>Access to limited content</td>
+      </tr>
+      <tr>
+        <td>Standard</td>
+        <td>$15</td>
+        <td>Access to all content + offline mode</td>
+      </tr>
+      <tr>
+        <td>Premium</td>
+        <td>$25</td>
+        <td>All Standard features + priority support</td>
+      </tr>
+    </tbody>
+  </table>
+</section>
+
+<section>
+  <h2>3. Media Embedding</h2>
+
+  <h3>Image</h3>
+  <figure>
+    <img src="https://via.placeholder.com/600x300.png?text=Sample+Image" alt="Sample placeholder image with text" />
+    <figcaption>Sample placeholder image demonstrating embedded media.</figcaption>
+  </figure>
+
+  <h3>Audio</h3>
+  <audio controls>
+    <source src="https://www.w3schools.com/html/horse.ogg" type="audio/ogg" />
+    <source src="https://www.w3schools.com/html/horse.mp3" type="audio/mpeg" />
+    Your browser does not support the audio element.
+  </audio>
+
+  <h3>Video</h3>
+  <video controls width="600" poster="https://via.placeholder.com/600x300.png?text=Video+Poster">
+    <source src="https://www.w3schools.com/html/mov_bbb.mp4" type="video/mp4" />
+    <source src="https://www.w3schools.com/html/mov_bbb.ogg" type="video/ogg" />
+    Your browser does not support the video element.
+  </video>
+</section>
+
+<section>
+  <h2>4. Contact & Feedback Form</h2>
+  <form action="#" method="post" novalidate>
+    <fieldset>
+      <legend>Personal Information</legend>
+
+      <label for="fullname">Full Name <span aria-label="required">*</span></label>
+      <input 
+        type="text" 
+        id="fullname" 
+        name="fullname" 
+        placeholder="John Doe" 
+        required 
+        minlength="3" 
+        maxlength="50" 
+        pattern="[A-Za-z\s]+" 
+        title="Only letters and spaces are allowed." 
+      />
+
+      <label for="email">Email Address <span aria-label="required">*</span></label>
+      <input 
+        type="email" 
+        id="email" 
+        name="email" 
+        placeholder="example@mail.com" 
+        required 
+      />
+
+      <label for="phone">Phone Number</label>
+      <input 
+        type="tel" 
+        id="phone" 
+        name="phone" 
+        placeholder="+1234567890" 
+        pattern="^\+?[0-9\s\-]{7,15}$" 
+        title="Enter a valid phone number with 7 to 15 digits, can include +, spaces or dashes." 
+      />
+    </fieldset>
+
+    <fieldset>
+      <legend>Preferences</legend>
+
+      <label for="contact-method">Preferred Contact Method</label>
+      <select id="contact-method" name="contact-method" required>
+        <option value="" disabled selected>Select an option</option>
+        <option value="email">Email</option>
+        <option value="phone">Phone</option>
+        <option value="none">No Contact</option>
+      </select>
+
+      <label>Subscribe to Newsletter?</label>
+      <input type="radio" id="subscribe-yes" name="subscribe" value="yes" checked />
+      <label for="subscribe-yes" style="display:inline;">Yes</label>
+      <input type="radio" id="subscribe-no" name="subscribe" value="no" />
+      <label for="subscribe-no" style="display:inline;">No</label>
+    </fieldset>
+
+    <fieldset>
+      <legend>Message</legend>
+
+      <label for="message">Your Message <span aria-label="required">*</span></label>
+      <textarea 
+        id="message" 
+        name="message" 
+        rows="5" 
+        placeholder="Write your message here..." 
+        required 
+        minlength="10"
+        maxlength="500"
+      ></textarea>
+    </fieldset>
+
+    <button type="submit">Submit</button>
+  </form>
+</section>
+
+<footer>
+  <p>© 2025 HTML5 Demo. All rights reserved.</p>
+</footer>
+
+</body>
+</html>
